@@ -9,7 +9,7 @@ body{
     margin:auto;
     max-width: 1500px;
     height: 100vh;
-    background-color: yellowgreen;
+    background-color: yellow;
     
 }
 header{ 
@@ -40,12 +40,13 @@ label{
     border:solid 2px blue;
 }
 .container{ 
-    background-color: yellowgreen;
+    /* background-color: yellow; */
     width:40%;
     height: 42vh;
     padding:.5rem;
     display:flex;
     flex-direction: column;
+    z-index: 99px;
 }
 .result{ 
     /* margin-top: 2rem; */
@@ -80,9 +81,6 @@ label{
         color:blue;
         z-index: 99;
         outline:none;
-    }
-    .select-2-selected{
-        background-color: blue;
     }
     .button{ 
         margin: .5rem 0 -.1rem 0;
