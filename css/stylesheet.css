@@ -58,6 +58,7 @@ label{
      padding: 0 .5rem;
      color:blue;
      outline: none;
+     border: none;
     }
     .select-1 { 
         width:100%;

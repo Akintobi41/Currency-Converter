@@ -71,6 +71,18 @@
       result.style.textAlign = "center"
       result.style.fontWeight = "bold"
 
+      //Quick Validations
+      // if(currencyAmmount < 0){ 
+      //   currencyAmmount = 1
+    
+      // }
+      if(currencyAmmount === undefined || currencyAmmount === null){ 
+        alert("Input some values")
+      }
+      if(firstCurrency == 0 || secondCurrency == 0){ 
+        alert("Please input some values to get started")
+      }
+
       // DOLLAR CALCULATIONS
       // To BTC
       if (firstCurrency == 1 && secondCurrency == 1) {
