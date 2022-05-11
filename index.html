@@ -71,13 +71,10 @@
       result.style.textAlign = "center"
       result.style.fontWeight = "bold"
 
-      //Quick Validations
-      // if(currencyAmmount < 0){ 
-      //   currencyAmmount = 1
-    
-      // }
-      if(currencyAmmount === undefined || currencyAmmount === null){ 
-        alert("Input some values")
+      //Quick Validations<
+      
+      if(currencyAmmount <= 0){ 
+       return  alert("Ammount invalid")
       }
       if(firstCurrency == 0 || secondCurrency == 0){ 
         alert("Please input some values to get started")
