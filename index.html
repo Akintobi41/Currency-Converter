@@ -66,12 +66,14 @@
 
       // color for result
 
-      result.style.color = "blue";
+      result.style.color = "#1e90ff";
       result.style.fontSize = "1.5rem";
       result.style.textAlign = "center"
       result.style.fontWeight = "bold"
 
-      //Quick Validations<
+      //Quick Validations
+
+
       
       if(currencyAmmount <= 0){ 
        return  alert("Ammount invalid")
@@ -88,30 +90,30 @@
 
       // TO USD
       if (firstCurrency == 4 && secondCurrency == 4) {
-        result.innerHTML = currencyAmmount * 33000 + "    <sup>$</sup>";
+        result.innerHTML = (currencyAmmount * 33000).toFixed(2) + "    <sup>$</sup>";
       }
       // TO PESOS
       if (firstCurrency == 1 && secondCurrency == 2) {
-        result.innerHTML = currencyAmmount * 20.3143 + "  <sup>MXN</sup>";
+        result.innerHTML = (currencyAmmount * 20.3143).toFixed(2) + "  <sup>MXN</sup>";
       }
       // TO USD
       if (firstCurrency == 5 && secondCurrency == 4) {
-        result.innerHTML = currencyAmmount / 20.3143 + "   <sup>$</sup";
+        result.innerHTML = (currencyAmmount / 20.3143).toFixed(2) + "   <sup>$</sup";
       }
       if (firstCurrency == 1 && secondCurrency == 3) {
-        result.innerHTML = currencyAmmount * 1.29 + "   <sup>CAD</sup>";
+        result.innerHTML = (currencyAmmount * 1.29).toFixed(2) + "   <sup>CAD</sup>";
       }
       if (firstCurrency == 3 && secondCurrency == 4) {
-        result.innerHTML = currencyAmmount / 1.29 + "   <sup>$</sup>";
+        result.innerHTML = (currencyAmmount / 1.29).toFixed(2) + "   <sup>$</sup>";
       }
       if (firstCurrency == 1 && secondCurrency == 4) {
-        result.innerHTML = currencyAmmount + "    <sup>$</sup>";
+        result.innerHTML = currencyAmmount.toFixed(2) + "    <sup>$</sup>";
       }
       if (firstCurrency == 1 && secondCurrency == 5) {
-        result.innerHTML = currencyAmmount * 0.81 + "    <sup>GBP</sup>";
+        result.innerHTML = (currencyAmmount * 0.81).toFixed(2) + "    <sup>GBP</sup>";
       }
       if (firstCurrency == 2 && secondCurrency == 4) {
-        result.innerHTML = currencyAmmount / 0.81 + "     <sup>$</sup>";
+        result.innerHTML = (currencyAmmount / 0.81).toFixed(2) + "     <sup>$</sup>";
       }
 
       // POUNDS CALCULATIONS
@@ -120,55 +122,55 @@
         result.innerHTML = currencyAmmount / 26782 + "     <sup>BTC</sup>";
       }
       if (firstCurrency == 4 && secondCurrency == 5) {
-        result.innerHTML = currencyAmmount * 26782 + "    <sup>GBP</sup>";
+        result.innerHTML = (currencyAmmount * 26782).toFixed(2) + "    <sup>GBP</sup>";
       }
       if (firstCurrency == 2 && secondCurrency == 2) {
-        result.innerHTML = currencyAmmount * 25.01 + "    <sup>MXN</sup>";
+        result.innerHTML = (currencyAmmount * 25.01).toFixed(2) + "    <sup>MXN</sup>";
       }
       if (firstCurrency == 5 && secondCurrency == 5) {
-        result.innerHTML = currencyAmmount / 25.01 + "    <sup>GBP</sup>";
+        result.innerHTML = (currencyAmmount / 25.01).toFixed(2) + "    <sup>GBP</sup>";
       }
       if (firstCurrency == 2 && secondCurrency == 3) {
-        result.innerHTML = currencyAmmount * 1.59 + " <sup>CAD</sup>";
+        result.innerHTML = (currencyAmmount * 1.59).toFixed(2) + " <sup>CAD</sup>";
       }
       if (firstCurrency == 3 && secondCurrency == 5) {
-        result.innerHTML = currencyAmmount / 1.59 + "  <sup>GBP</sup>";
+        result.innerHTML = (currencyAmmount / 1.59).toFixed(2) + "  <sup>GBP</sup>";
       }
 
       if (firstCurrency == 2 && secondCurrency == 5) {
-        result.innerHTML = currencyAmmount + "  <sup>GBP</sup>";
+        result.innerHTML = (currencyAmmount).toFixed(2) + "  <sup>GBP</sup>";
       }
 
       if (firstCurrency == 3 && secondCurrency == 1) {
         result.innerHTML = currencyAmmount / 42870 + "<sup>BTC</sup>";
       }
       if (firstCurrency == 4 && secondCurrency == 3) {
-        result.innerHTML = currencyAmmount * 42870 + "<sup>CAD</sup>";
+        result.innerHTML = (currencyAmmount * 42870).toFixed(2) + "<sup>CAD</sup>";
       }
       if (firstCurrency == 3 && secondCurrency == 2) {
-        result.innerHTML = currencyAmmount * 15.71 + "<sup>MXN</sup>";
+        result.innerHTML = (currencyAmmount * 15.71).toFixed(2) + "<sup>MXN</sup>";
       }
       if (firstCurrency == 5 && secondCurrency == 3) {
-        result.innerHTML = currencyAmmount / 15.71 + "   <sup>CAD</sup>";
+        result.innerHTML = (currencyAmmount / 15.71).toFixed(2) + "   <sup>CAD</sup>";
       }
       if (firstCurrency == 3 && secondCurrency == 3) {
-        result.innerHTML = currencyAmmount + "<sup>CAD</sup>";
+        result.innerHTML = (currencyAmmount).toFixed(2) + "<sup>CAD</sup>";
       }
       if (firstCurrency == 3 && secondCurrency == 5) {
-        result.innerHTML = currencyAmmount / 1.59 + "<sup>GBP</sup>";
+        result.innerHTML = (currencyAmmount / 1.59).toFixed(2) + "<sup>GBP</sup>";
       }
 
       if (firstCurrency == 4 && secondCurrency == 1) {
         result.innerHTML = currencyAmmount + "<sup>BTC</sup>";
       }
       if (firstCurrency == 4 && secondCurrency == 2) {
-        result.innerHTML = currencyAmmount * 668528 + "   <sup>MXN</sup>";
+        result.innerHTML = (currencyAmmount * 668528).toFixed(2) + "   <sup>MXN</sup>";
       }
       if (firstCurrency == 5 && secondCurrency == 1) {
         result.innerHTML = currencyAmmount / 668528 + "   <sup>BTC</sup>";
       }
       if (firstCurrency == 5 && secondCurrency == 2) {
-        result.innerHTML = currencyAmmount + "<sup>MXN</sup>";
+        result.innerHTML = (currencyAmmount).toFixed(2) + "<sup>MXN</sup>";
       }
     }
   </script>
