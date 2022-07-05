@@ -8,13 +8,6 @@
     <link rel="stylesheet" href="/css/stylesheet.css" />
   </head>
   <body>
-    <header>
-      <button class="main-buttons">menu</button>
-      <button class="main-buttons">tools</button>
-      <button class="main-buttons">trading</button>
-      <button class="main-buttons">resources</button>
-      <!-- <button class="main-buttons">transfers</button> -->
-    </header>
     <section class="title">Currency Converter</section>
     <main>
       <section class="container">
@@ -32,6 +25,7 @@
             <option value="3">Canadian Dollars (CAD)</option>
             <option value="4">Bitcoin (BTC)</option>
             <option value="5">Mexican Pesos (MXN)</option>
+            <option value="6">Nigerian Naira (NGN)</option>
           </select> </label
         ><br />
         <label
@@ -43,135 +37,18 @@
             <option value="3">Canadian Dollar (CAD)</option>
             <option value="4">Dollars (USD)</option>
             <option value="5">British Pounds (GBP)</option>
+            <option value="6">Nigerian Naira (NGN)</option>
           </select> </label
         ><br />
         <button type="button" class="button" onclick="calculate()">
           CALCULATE
         </button>
       </section>
-    
     </main>
     <section class="result"></section>
   </body>
 
-  <script>
-    function calculate() {
-      let result = document.querySelector(".result");
-      let currencyAmmount = document.querySelector(".number").value;
-    
-      let firstCurrency = document.querySelector(".select-1").value;
-    
-      let secondCurrency = document.querySelector(".select-2").value;
-    
-
-      // color for result
-
-      result.style.color = "#1e90ff";
-      result.style.fontSize = "1.5rem";
-      result.style.textAlign = "center"
-      result.style.fontWeight = "bold"
-
-      //Quick Validations
-
-
-      
-      if(currencyAmmount <= 0){ 
-       return  alert("Ammount invalid")
-      }
-      if(firstCurrency == 0 || secondCurrency == 0){ 
-        alert("Please input some values to get started")
-      }
-
-      // DOLLAR CALCULATIONS
-      // To BTC
-      if (firstCurrency == 1 && secondCurrency == 1) {
-        result.innerHTML = currencyAmmount / 33000 + "    <sub>BTC</sub>";
-      }
-
-      // TO USD
-      if (firstCurrency == 4 && secondCurrency == 4) {
-        result.innerHTML = (currencyAmmount * 33000).toFixed(2) + "    <sup>$</sup>";
-      }
-      // TO PESOS
-      if (firstCurrency == 1 && secondCurrency == 2) {
-        result.innerHTML = (currencyAmmount * 20.3143).toFixed(2) + "  <sup>MXN</sup>";
-      }
-      // TO USD
-      if (firstCurrency == 5 && secondCurrency == 4) {
-        result.innerHTML = (currencyAmmount / 20.3143).toFixed(2) + "   <sup>$</sup";
-      }
-      if (firstCurrency == 1 && secondCurrency == 3) {
-        result.innerHTML = (currencyAmmount * 1.29).toFixed(2) + "   <sup>CAD</sup>";
-      }
-      if (firstCurrency == 3 && secondCurrency == 4) {
-        result.innerHTML = (currencyAmmount / 1.29).toFixed(2) + "   <sup>$</sup>";
-      }
-      if (firstCurrency == 1 && secondCurrency == 4) {
-        result.innerHTML = currencyAmmount.toFixed(2) + "    <sup>$</sup>";
-      }
-      if (firstCurrency == 1 && secondCurrency == 5) {
-        result.innerHTML = (currencyAmmount * 0.81).toFixed(2) + "    <sup>GBP</sup>";
-      }
-      if (firstCurrency == 2 && secondCurrency == 4) {
-        result.innerHTML = (currencyAmmount / 0.81).toFixed(2) + "     <sup>$</sup>";
-      }
-
-      // POUNDS CALCULATIONS
-
-      if (firstCurrency == 2 && secondCurrency == 1) {
-        result.innerHTML = currencyAmmount / 26782 + "     <sup>BTC</sup>";
-      }
-      if (firstCurrency == 4 && secondCurrency == 5) {
-        result.innerHTML = (currencyAmmount * 26782).toFixed(2) + "    <sup>GBP</sup>";
-      }
-      if (firstCurrency == 2 && secondCurrency == 2) {
-        result.innerHTML = (currencyAmmount * 25.01).toFixed(2) + "    <sup>MXN</sup>";
-      }
-      if (firstCurrency == 5 && secondCurrency == 5) {
-        result.innerHTML = (currencyAmmount / 25.01).toFixed(2) + "    <sup>GBP</sup>";
-      }
-      if (firstCurrency == 2 && secondCurrency == 3) {
-        result.innerHTML = (currencyAmmount * 1.59).toFixed(2) + " <sup>CAD</sup>";
-      }
-      if (firstCurrency == 3 && secondCurrency == 5) {
-        result.innerHTML = (currencyAmmount / 1.59).toFixed(2) + "  <sup>GBP</sup>";
-      }
-
-      if (firstCurrency == 2 && secondCurrency == 5) {
-        result.innerHTML = (currencyAmmount).toFixed(2) + "  <sup>GBP</sup>";
-      }
-
-      if (firstCurrency == 3 && secondCurrency == 1) {
-        result.innerHTML = currencyAmmount / 42870 + "<sup>BTC</sup>";
-      }
-      if (firstCurrency == 4 && secondCurrency == 3) {
-        result.innerHTML = (currencyAmmount * 42870).toFixed(2) + "<sup>CAD</sup>";
-      }
-      if (firstCurrency == 3 && secondCurrency == 2) {
-        result.innerHTML = (currencyAmmount * 15.71).toFixed(2) + "<sup>MXN</sup>";
-      }
-      if (firstCurrency == 5 && secondCurrency == 3) {
-        result.innerHTML = (currencyAmmount / 15.71).toFixed(2) + "   <sup>CAD</sup>";
-      }
-      if (firstCurrency == 3 && secondCurrency == 3) {
-        result.innerHTML = (currencyAmmount).toFixed(2) + "<sup>CAD</sup>";
-      }
-      if (firstCurrency == 3 && secondCurrency == 5) {
-        result.innerHTML = (currencyAmmount / 1.59).toFixed(2) + "<sup>GBP</sup>";
-      }
-
-      if (firstCurrency == 4 && secondCurrency == 1) {
-        result.innerHTML = currencyAmmount + "<sup>BTC</sup>";
-      }
-      if (firstCurrency == 4 && secondCurrency == 2) {
-        result.innerHTML = (currencyAmmount * 668528).toFixed(2) + "   <sup>MXN</sup>";
-      }
-      if (firstCurrency == 5 && secondCurrency == 1) {
-        result.innerHTML = currencyAmmount / 668528 + "   <sup>BTC</sup>";
-      }
-      if (firstCurrency == 5 && secondCurrency == 2) {
-        result.innerHTML = (currencyAmmount).toFixed(2) + "<sup>MXN</sup>";
-      }
-    }
+  <script src="/script.js">
+   
   </script>
 </html>
